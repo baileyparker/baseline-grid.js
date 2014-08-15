@@ -1,0 +1,49 @@
+baseline-grid.js
+================
+
+A simple, dependency-free (referenes no external images/scripts/styles) baseline overlay script/bookmarklet. Works by creating an SVG in the background and overlaying it on top of the `<html>` tag with the pseduo-element `::after`.
+
+## Usage
+
+Baseline-grid.js is a quick drop in for on-the-fly designing. Copy the following into a bookmark to use Baseline-grid.js as a bookmarklet (see the end of the code for the customization options):
+
+    {{& bookmarklet }}
+
+(or you can drag this link to your bookmarks bar: [Baseline - 24px]({{& bookmarklet }})).
+
+To clear the currently visible baseline grid:
+
+    {{& clearBookmarklet }}
+
+(or you can drag this link into your bookmarks bar: [Clear Baseline]({{& clearBookmarklet }}))
+
+If you prefer tinkering in the dev tools, you can also copy and paste this snippet into the console to draw and clear the baseline overlay on the fly:
+
+    {{& code }}
+
+In addition, the baseline-grid.js script can be included at the bottom of your `<body>` and used programatically:
+
+    <script src="/js/baseline-grid.js"></script>
+    <script>
+    	// Draw a 22px red baseline
+		drawBaseline(22, 'red');
+
+		// And then later remove it
+		clearBaseline();
+    </script>
+
+## But what do I do with it?
+
+See [this Tuts+ tutorial on implementing vertical rythmn](http://webdesign.tutsplus.com/articles/improving-layout-with-vertical-rhythm--webdesign-14070) and this chapter from [*The Elements of Typographic Style Applied to the Web*](http://webtypography.net/2.2.2).
+
+## Browser Support
+
+Support is dependent on SVG support, so that means:
+
+ - All versions of Chrome (+ mobile), Firefox (+ Android), Safari (+ iOS Safari), and Opera (+ mobile)
+ - Android Browser >= 4.4
+ - IE >= 9
+
+## Contributing
+
+Contributions are wanted and welcomed! Please submit an issue to discuss your contribution first. When submitting a pull request, be sure to run `npm run-script make` to minify the script and auto-upate this readme. Please commit both the `README` and `baseline-grid.min.js`.

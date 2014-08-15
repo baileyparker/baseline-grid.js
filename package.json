@@ -1,0 +1,30 @@
+{
+  "name": "baseline-grid.js",
+  "version": "1.0.0",
+  "description": "A simple, dependency-free (no external image requests) baseline overlay script/bookmarklet",
+  "main": "baseline-grid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baileyparker/baseline-grid.js.git"
+  },
+  "keywords": [
+    "baseline",
+    "vertical",
+    "rythmn",
+    "design"
+  ],
+  "author": "Bailey Parker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baileyparker/baseline-grid.js/issues"
+  },
+  "homepage": "https://github.com/baileyparker/baseline-grid.js",
+  "devDependencies": {
+    "uglify-js": "2.4.15",
+    "mustache": "0.8.2"
+  }
+}
