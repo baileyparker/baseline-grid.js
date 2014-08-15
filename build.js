@@ -11,9 +11,19 @@ minified = uglify.minify('baseline-grid.js');
 
 var readmeTemplate = fs.readFileSync('README.md-template').toString();
 
+var bookmarklet = 'javascript:void((function(){' + minified.code + 'window.drawBaseline(24);})());',
+	clearBookmarklet = 'javascript:void(window.clearBaseline());';
+
 fs.writeFileSync('README.md', mustache.render(readmeTemplate, {
 
 	code: minified.code,
-	bookmarklet: 'javascript:void((function(){' + minified.code + 'window.drawBaseline(24);})());',
-	clearBookmarklet: 'javascript:void(window.clearBaseline());',
+	bookmarklet: bookmarklet,
+	bookmarkletLink: escapeLinkForMarkdown(bookmarklet),
+	clearBookmarklet: clearBookmarklet,
+	clearBookmarkletLink: escapeLinkForMarkdown(clearBookmarklet),
 }));
+
+function escapeLinkForMarkdown(link) {
+
+	return link.replace(/\)/, '\\)');
+}
