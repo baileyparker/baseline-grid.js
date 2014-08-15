@@ -18,12 +18,5 @@ fs.writeFileSync('README.md', mustache.render(readmeTemplate, {
 
 	code: minified.code,
 	bookmarklet: bookmarklet,
-	bookmarkletLink: escapeLinkForMarkdown(bookmarklet),
 	clearBookmarklet: clearBookmarklet,
-	clearBookmarkletLink: escapeLinkForMarkdown(clearBookmarklet),
 }));
-
-function escapeLinkForMarkdown(link) {
-
-	return link.replace(/\)/, '\\)');
-}

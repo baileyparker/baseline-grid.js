@@ -9,13 +9,9 @@ Baseline-grid.js is a quick drop in for on-the-fly designing. Copy the following
 
     {{& bookmarklet }}
 
-(or you can drag this link to your bookmarks bar: [Baseline - 24px]({{& bookmarkletLink }})).
-
 To clear the currently visible baseline grid:
 
     {{& clearBookmarklet }}
-
-(or you can drag this link into your bookmarks bar: [Clear Baseline]({{& clearBookmarkletLink }}))
 
 If you prefer tinkering in the dev tools, you can also copy and paste this snippet into the console to draw and clear the baseline overlay on the fly:
 
